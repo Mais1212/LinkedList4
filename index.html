@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+      <link rel="stylesheet" href="static/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>Пример страницы с ссылками и формой</title>
+</head>
+<body>
+<header>
+      <img src="static/logo.png" alt="A.A Andrew" />
+      <h1>SpiritVeil</h1>
+      <nav>
+        <ul class="horizontal-list">
+          <li><a href="https://vk.com/">VK</a></li>
+          <li><a href="">YT</a></li>
+          <li><a href="">TG</a></li>
+        </ul>
+      </nav>
+</header>
+  <main>
+  <section id="linked_list">
+      <h1>Список ссылок</h1>
+      <ul>
+        <li><a href="http://kubsu.ru">Абсолютная ссылка на главную kubsu.ru </a></li>
+        <li><a href="https://kubsu.ru">Абсолютная ссылка на главную kubsu.ru(https)</a></li>
+        <li><a href="https://kubsu.ru"><img style="width:500px"src="static/flower.png" alt="Картинка-ссылка"></a></li>
+        <li><a href="internal.html">Сокращённая ссылка на внутреннюю страницу</a></li>
+        <li><a href="/">Сокращённая ссылка на главную страницу ("/")</a></li>
+        <li><a href="#section1">Ссылка на фрагмент текущей страницы</a></li>
+        <li><a href="list.html?one=1&two=2&three=3">Ссылка с тремя параметрами в URL</a></li>
+        <li><a href="product.html?id=123">Ссылка с параметром id в URL</a></li>
+        <li><a href="contact.html">Относительная на страницу в текущем каталоге (contact.html)</a></li>
+        <li><a href="about/team.html">Относительная на страницу в каталоге about (about/team.html)</a></li>
+        <li><a href="../parent.html">Относительная на страницу уровнем выше</a></li>
+        <li><a href="../../grandparent.html">Относительная на страницу двумя уровнями выше</a></li>
+        <li><p>В тексте абзаца встречается <a href="https://kubsu.ru">контекстная ссылка</a> на сайт.</p></li>
+        <li><a href="https://example.com/page.html#fragment">Ссылка на фрагмент стороннего сайта</a></li>
+        <li><img src="static/fil.png" style="width:500px; high:500px;" usemap="map1" alt="Изображение с картой"></li>
+        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="nofollow-target.html" rel="nofollow">Ссылка, по которой запрещён переход поисковикам</a></li>
+        <li><a href="noindex-target.html" rel="noindex nofollow">Ссылка, запрещённая для индексации поисковиками</a></li>
+        <li>
+          <ol>
+            <li><a href="page1.html" title="Первая страница">Первая страница</a></li>
+            <li><a href="page2.html" title="Вторая страница">Вторая страница</a></li>
+            <li><a href="page3.html" title="Третья страница">Третья страница</a></li>
+          </ol>
+        </li>
+        <li><a href="ftp://user:password@ftp.example.com/file.txt">Ссылка на файл на FTP с авторизацией</a></li>
+      </ul>
+
+      <map name="map1">
+        <area shape="rect" coords="0,0,200,300" href="https://kubsu.ru" alt="Прямоугольная область">
+        <area shape="circle" coords="150,75,40" href="https://example.com" alt="Круглая область">
+      </map>
+  </section>
+    <section id="table">
+      <table class="spirit-table">
+        <tr>
+          <th>Secundum</th>
+          <th>Descriptio</th>
+        </tr>
+        <tr>
+          <td>Imaginum Gallery</td>
+          <td>Portus et picturae in uno stilo mystico</td>
+        </tr>
+        <tr>
+          <td>Inspiratio</td>
+          <td>Historiae ac ideae pro creatione</td>
+        </tr>
+        <tr>
+          <td>Paleta Colorum</td>
+          <td>Compositio tonorum et recommendationes styli</td>
+        </tr>
+        <tr>
+          <td>Collectio Patternum</td>
+          <td>Abstracta et floralia ornamenta ad decorandum</td>
+        </tr>
+        <tr>
+          <td>Contactus</td>
+          <td>Modus communicandi cum auctore</td>
+        </tr>
+        <tr>
+          <td>Communitatis Link</td>
+          <td>VK, Telegram, ceteris membris</td>
+        </tr>
+      </table>
+    </section>
+  <section id="registration">
+      <h2 id="section1">Форма регистрации</h2>
+      <form action="submit.php" method="post">
+        <div>
+          <label for="fullname">ФИО</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div>
+          <label for="phone" >Телефон</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="birth">Дата рождения</label>
+          <input type="date" id="birth" name="birth" required>
+        </div>
+        <fieldse>
+          <legend>Пол</legend>
+          <div>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Мужской</label>
+          </div>
+          <div>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Женский</label>
+          </div>
+        </fieldset>
+        <div>
+          <label for="languages">Любимый язык программирования (множественный выбор)</label>
+          <select id="languages" name="languages[]" multiple size="6">
+            <option value="Pascal">Pascal</option>
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="PHP">PHP</option>
+            <option value="Python">Python</option>
+            <option value="Golang">Golang</option>
+            <option value="Ruby">Ruby</option>
+          </select>
+        </div>
+        <div>
+          <label for="bio">Биография</label>
+          <textarea id="bio" name="bio" rows="6" required></textarea>
+        </div>
+        <div>
+          <input type="checkbox" id="agree" name="agree" required>
+          <label for="agree">С контрактом ознакомлен(а)</label>
+        </div>
+        <div>
+          <button type="submit">Сохранить</button>
+        </div>
+      </form>
+      </div>
+  </section>
+  </main>
+   <footer>
+       <a> АА(c)thankusomuch4v1s1tth1ss1te</a>
+   </footer>
+</body>
+</html>

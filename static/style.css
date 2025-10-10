@@ -1,0 +1,262 @@
+
+/* MOBILE FIRST - базовые стили для смартфонов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #D8DEEC;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: linear-gradient(rgba(216, 222, 236, 0.8), rgba(103, 118, 153, 0.8)),
+              url('./backflowers.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: #A4B2CC;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* Навигация - ВЕРТИКАЛЬНЫЙ список */
+nav {
+  width: 100%;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+ul.horizontal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+ul.horizontal-list li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  padding: 10px;
+}
+
+section {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+/* Ограничения для изображений */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Специально для больших изображений в контенте */
+section img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Таблица */
+.spirit-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(90deg, #D8DEEC 0%, #A4B2CC 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.spirit-table th, .spirit-table td {
+  padding: 8px;
+  border-bottom: 1px solid #A4B2CC;
+  text-align: left;
+}
+
+.spirit-table th {
+  background-color: #677699;
+  color: #F5F7FA;
+}
+
+/* Форма - фиксированная структура */
+#registration form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+#registration form > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#registration label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #3a4668;
+}
+
+#registration input, 
+#registration select, 
+#registration textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #A4B2CC;
+  border-radius: 6px;
+  font-size: 16px;
+  background: white;
+}
+
+#registration button {
+  width: 100%;
+  padding: 12px;
+  background-color: #677699;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: stretch;
+}
+
+#registration button:hover {
+  background-color: #596180;
+}
+
+#registration input[type="radio"],
+#registration input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  background: linear-gradient(90deg, #677699 0%, #596180 100%);
+  align-items: center;
+  justify-content: center;
+  color: #F5F7FA;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  
+  header img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0;
+  }
+  
+  header h1 {
+    margin-bottom: 0;
+    flex-grow: 1;
+    margin-left: 20px;
+    font-size: 24px;
+  }
+  
+  nav {
+    width: auto;
+  }
+  
+  /* Навигация горизонтальная */
+  ul.horizontal-list {
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  section img {
+    max-height: 400px;
+  }
+  
+  .spirit-table {
+    font-size: 16px;
+  }
+  
+  .spirit-table th, .spirit-table td {
+    padding: 12px;
+  }
+  
+  #registration button {
+    width: 200px;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    height: 110px;
+  }
+  
+  header img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  header h1 {
+    font-size: 28px;
+  }
+  
+  main {
+    max-width: 1100px;
+  }
+  
+  section img {
+    max-height: 500px;
+  }
+  
+  .spirit-table th, .spirit-table td {
+    padding: 16px;
+  }
+}
+a {
+    text-decoration: none;
+}
